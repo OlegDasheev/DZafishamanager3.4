@@ -1,14 +1,14 @@
 package ru.netology.manager;
 
-import ru.netology.domain.Poster;
+import ru.netology.domain.Afisha;
 
 public class PosterManager {
-    private Poster[] items = new Poster[0];
+    private Afisha[] items = new Afisha[0];
 
-    public void add(Poster item) {
+    public void add(Afisha item) {
         // создаём новый массив размером на единицу больше
         int length = items.length + 1;
-        Poster[] tmp = new Poster[length];
+        Afisha[] tmp = new Afisha[length];
         // itar + tab
         // копируем поэлементно
         // for (int i = 0; i < items.length; i++) {
@@ -21,8 +21,8 @@ public class PosterManager {
         items = tmp;
     }
 
-    public Poster[] getAll() {
-        Poster[] result = new Poster[items.length];
+    public Afisha[] getAll() {
+        Afisha[] result = new Afisha[items.length];
         // перебираем массив в прямом порядке
         // но кладём в результаты в обратном
         for (int i = 0; i < result.length; i++) {
@@ -35,9 +35,9 @@ public class PosterManager {
     // наивная реализация
     public void removeById(int id) {
         int length = items.length - 1;
-        Poster[] tmp = new Poster[length];
+        Afisha[] tmp = new Afisha[length];
         int index = 0;
-        for (Poster item : items) {
+        for (Afisha item : items) {
             if (item.getId() != id) {
                 tmp[index] = item;
                 index++;
